@@ -1,0 +1,13 @@
+20/05/2021 19:29:52 - Wygrany: Jan, Przegrany: Tom
+20/05/2021 19:30:01 - Wygrany: Tom, Przegrany: Jan
+20/05/2021 19:30:15 - Remis pomiêdzy Jan  i Tom
+20/05/2021 19:31:35 - Wygrany: Komputer, Przegrany: Ania
+20/05/2021 19:32:03 - Wygrany: Tom, Przegrany: Komputer
+20/05/2021 19:33:53 - Wygrany: Tomasz, Przegrany: Ania
+21/05/2021 20:39:31 - Wygrany: B, Przegrany: A
+21/05/2021 20:41:19 - Wygrany: Komputer, Przegrany: 
+21/05/2021 20:41:41 - Remis pomiêdzy  i Komputer
+21/05/2021 20:41:50 - Wygrany: Komputer, Przegrany: 
+21/05/2021 20:41:58 - Wygrany: , Przegrany: Komputer
+21/05/2021 20:42:07 - Remis pomiêdzy  i Komputer
+21/05/2021 20:42:20 - Remis pomiêdzy  i Komputer
