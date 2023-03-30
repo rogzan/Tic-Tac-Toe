@@ -5,7 +5,7 @@ import datetime
 
 # Dane startowe
 root = Tk()
-root.geometry('480x510')
+root.geometry('550x530')
 root.resizable(False, False)
 root.title("Kółko i krzyżyk")
 root.iconbitmap("logo.ico")
@@ -37,14 +37,14 @@ def gameMenu():
     time_game = Entry(root, width=30, borderwidth=5)
     time_game.place(x=250, y=240)
     time_game.insert(0, "0")
-    Label(root, text='Menu', fg="black", font="Times 22 bold").place(x=200, y=270)
-    Button(root, text="Graj z komputerem", fg="black", font="Times 16", padx="70",
-           command=partial(singleplayer_game, nick1_menu, size, time_game)).place(x=82, y=310)
-    Button(root, text="Graj ze znajomym", fg="black", font="Times 16", padx="75",
-           command=partial(multiplayer_game, nick1_menu, nick2_menu, size)).place(x=82, y=355)
-    Button(root, text="Statystyki", fg="black", font="Times 16", padx="110",
-           command=partial(stat_display)).place(x=82, y=400)
-    Button(root, text="Wyjdź", fg="black", font="Times 16", padx="123", command=root.quit).place(x=82, y=445)
+    Label(root, text='Menu', fg="black", font="Times 22 bold").place(x=235, y=290)
+    Button(root, text="Graj z komputerem", width=16, fg="black", font="Times 16", padx="70",
+           command=partial(singleplayer_game, nick1_menu, size, time_game)).place(x=115, y=330)
+    Button(root, text="Graj ze znajomym", width=15, fg="black", font="Times 16", padx="75",
+           command=partial(multiplayer_game, nick1_menu, nick2_menu, size)).place(x=115, y=375)
+    Button(root, text="Statystyki", width=6, fg="black", font="Times 16", padx="110",
+           command=partial(stat_display)).place(x=115, y=420)
+    Button(root, text="Wyjdź", width=3, fg="black", font="Times 16", padx="123", command=root.quit).place(x=115, y=465)
 
 
 # Pasem Menu dostępny w każdym momencie gry z podstawowymi opcjami oraz info
@@ -263,9 +263,9 @@ def singleplayer_game(nick1_menu, size_menu, time_game):
             for widget in root.winfo_children():
                 widget.destroy()
             menuToolbar()
-            Label(root, text="Remis", fg="dark green", font="Times 42 bold").place(x=165, y=100)
-            Label(root, text="Koniec czasu", fg="dark green", font="Times 42 bold").place(x=85, y=200)
-            Button(root, text="Menu", fg="black", font="Times 16", padx="123", command=reset).place(x=82, y=350)
+            Label(root, text="Remis", fg="dark green", font="Times 42 bold").pack()
+            Label(root, text="Koniec czasu", fg="dark green", font="Times 42 bold").place(x=155, y=200)
+            Button(root, text="Menu", fg="black", font="Times 16", padx="123", command=reset).place(x=115, y=350)
             game_works = 0
 
     if (time != 0):
@@ -337,7 +337,7 @@ def win(button, size):
                 stat(nick1, nick2)
                 Label(root, text="Wygrał", fg="dark green", font="Times 42 bold").pack()
                 Label(root, text=nick1, fg="dark green", font="Times 42 bold").pack()
-                Button(root, text="Menu", fg="black", font="Times 16", padx="123", command=reset).place(x=82, y=350)
+                Button(root, text="Menu", fg="black", font="Times 16", padx="123", command=reset).place(x=115, y=350)
 
             elif (button[i][j]['text'] == button[i + 1][j]['text'] == button[i + 2][j]['text'] == "X") \
                     or (button[i][j + 1]['text'] == button[i + 1][j + 1]['text'] == button[i + 2][j + 1]['text'] == "X") \
@@ -354,15 +354,15 @@ def win(button, size):
                 stat(nick2, nick1)
                 Label(root, text="Wygrał", fg="dark green", font="Times 42 bold").pack()
                 Label(root, text=nick2, fg="dark green", font="Times 42 bold").pack()
-                Button(root, text="Menu", fg="black", font="Times 16", padx="123", command=reset).place(x=82, y=350)
+                Button(root, text="Menu", fg="black", font="Times 16", padx="123", command=reset).place(x=115, y=350)
 
             elif (counter == size * size):
                 game_works = 0
                 for widget in root.winfo_children():
                     widget.destroy()
                 stat_draw(nick1, nick2)
-                Label(root, text="Remis", fg="dark green", font="Times 42 bold").place(x=165, y=100)
-                Button(root, text="Menu", fg="black", font="Times 16", padx="123", command=reset).place(x=82, y=350)
+                Label(root, text="Remis", fg="dark green", font="Times 42 bold").place(x=220, y=10)
+                Button(root, text="Menu", fg="black", font="Times 16", padx="123", command=reset).place(x=115, y=350)
 
 
 # Funkcja zapisywania zwycięztwa
@@ -401,7 +401,7 @@ def stat_display():
         list[i] = list_of_stats[i]
     for i in range(17):
         Label(root, text=list[i], fg="black", font="Times 13 bold").place(x=0, y=i * 24)
-    Button(root, text="Wróć do menu", fg="black", font="Times 16", padx="10", command=reset).place(x=170, y=420)
+    Button(root, text="Wróć do menu", fg="black", font="Times 16", padx="10", command=reset).place(x=200, y=470)
 
 
 # Funkcja cofania ruchu
